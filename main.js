@@ -18,6 +18,7 @@ const addTask = e => {
 
   const removeTask = e => {
     e.target.parentNode.remove();
+    liElements = document.querySelectorAll("li");
     taskNumber.textContent = liElements.length;
   };
 
@@ -25,7 +26,7 @@ const addTask = e => {
     element.addEventListener("click", removeTask);
   });
   //   ---------
-  const liElements = document.querySelectorAll("li");
+  let liElements = document.querySelectorAll("li");
 
   taskNumber.textContent = liElements.length;
 
